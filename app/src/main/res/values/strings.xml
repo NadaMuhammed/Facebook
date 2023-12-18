@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Facebook</string>
+    <string name="post_text">Buckle up, because change is coming to WordPress</string>
+    <string name="post_link">http://unblast.com/color-shemes</string>
+    <string name="like_counts">12</string>
+    <string name="username">Unblast</string>
+    <string name="like">Like</string>
+    <string name="comment">Comment</string>
+    <string name="share">Share</string>
+    <string name="facebook">facebook</string>
+    <string name="username_hint">Email or phone number</string>
+    <string name="password_hint">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up_for_facebook">Sign Up For Facebook</string>
+    <string name="help_centre">Help Centre</string>
+    <string name="time_posted">2 hrs</string>
+    <string name="share_counts">1 Share</string>
+</resources>

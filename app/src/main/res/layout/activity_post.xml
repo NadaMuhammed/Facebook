@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfileImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/colorcard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/username"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/userProfileImage"
+        app:layout_constraintTop_toTopOf="@id/userProfileImage" />
+
+    <TextView
+        android:id="@+id/timePostedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_posted"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/userNameText"
+        app:layout_constraintTop_toBottomOf="@id/userNameText" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/globe"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toEndOf="@id/timePostedText"
+        app:layout_constraintTop_toBottomOf="@id/userNameText"
+        app:layout_constraintWidth_percent="0.04" />
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="20dp"-->
+    <!--        android:layout_height="20dp"-->
+    <!--        android:layout_marginStart="15dp"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:src="@drawable/globe"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/timePostedText"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/userNameText" />-->
+
+
+    <TextView
+        android:id="@+id/postCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="15dp"
+        android:text="@string/post_text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userProfileImage" />
+
+    <TextView
+        android:id="@+id/postCaptionLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="15dp"
+        android:text="@string/post_link"
+        android:textColor="@color/link_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/postCaption"
+        app:layout_constraintTop_toBottomOf="@id/postCaption" />
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/colorcard"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintTop_toBottomOf="@id/postCaptionLink" />
+
+
+    <ImageView
+        android:id="@+id/likeIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/like"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postImage"
+        app:layout_constraintWidth_percent="0.07" />
+
+    <TextView
+        android:id="@+id/likeCounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/like_counts"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/likeIcon"
+        app:layout_constraintTop_toTopOf="@id/likeIcon" />
+
+    <ImageView
+        android:id="@+id/arrowImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+        app:layout_constraintBottom_toBottomOf="@id/likeIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/likeIcon" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/shareImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/colorcard"
+        app:layout_constraintBottom_toBottomOf="@id/arrowImage"
+        app:layout_constraintEnd_toStartOf="@id/arrowImage"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintTop_toTopOf="@id/arrowImage"
+        app:layout_constraintWidth_percent="0.07" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/share_counts"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/shareImage"
+        app:layout_constraintEnd_toStartOf="@id/shareImage"
+        app:layout_constraintTop_toTopOf="@id/shareImage" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/light_grey"
+        app:layout_constraintBottom_toTopOf="@id/buttonsLayout" />
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@id/likeIcon">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:drawableStart="@drawable/ic_baseline_thumb_up_24"
+            android:fontFamily="sans-serif-medium"
+            android:padding="25dp"
+            android:drawablePadding="6dp"
+            android:text="@string/like"
+            android:textAllCaps="false"
+            android:textColor="@color/grey"
+            android:textSize="16sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:drawableStart="@drawable/ic_baseline_mode_comment_24"
+            android:fontFamily="sans-serif-medium"
+            android:padding="25dp"
+            android:drawablePadding="6dp"
+            android:text="@string/comment"
+            android:textAllCaps="false"
+            android:textColor="@color/grey"
+            android:textSize="16sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:drawableStart="@drawable/ic_baseline_share_24"
+            android:fontFamily="sans-serif-medium"
+            android:padding="25dp"
+            android:drawablePadding="6dp"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:textStyle="normal"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/light_grey"
+        app:layout_constraintTop_toBottomOf="@id/buttonsLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
