@@ -37,27 +37,27 @@
         app:layout_constraintStart_toStartOf="@id/userNameText"
         app:layout_constraintTop_toBottomOf="@id/userNameText" />
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitStart"
-        android:src="@drawable/globe"
-        app:layout_constraintHeight_percent="0.04"
-        app:layout_constraintStart_toEndOf="@id/timePostedText"
-        app:layout_constraintTop_toBottomOf="@id/userNameText"
-        app:layout_constraintWidth_percent="0.04" />
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:scaleType="fitStart"-->
+<!--        android:src="@drawable/globe"-->
+<!--        app:layout_constraintHeight_percent="0.04"-->
+<!--        app:layout_constraintStart_toEndOf="@id/timePostedText"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/userNameText"-->
+<!--        app:layout_constraintWidth_percent="0.04" />-->
 
-    <!--    <ImageView-->
-    <!--        android:layout_width="20dp"-->
-    <!--        android:layout_height="20dp"-->
-    <!--        android:layout_marginStart="15dp"-->
-    <!--        android:layout_marginTop="5dp"-->
-    <!--        android:src="@drawable/globe"-->
-    <!--        app:layout_constraintStart_toEndOf="@id/timePostedText"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/userNameText" />-->
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/globe"
+            app:layout_constraintStart_toEndOf="@id/timePostedText"
+            app:layout_constraintTop_toBottomOf="@id/userNameText" />
 
 
     <TextView
@@ -102,26 +102,24 @@
 
     <ImageView
         android:id="@+id/likeIcon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_margin="15dp"
         android:src="@drawable/like"
-        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/postImage"
-        app:layout_constraintWidth_percent="0.07" />
+        app:layout_constraintTop_toBottomOf="@id/postImage" />
 
     <TextView
         android:id="@+id/likeCounts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="12dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/like_counts"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/likeIcon"
-        app:layout_constraintTop_toTopOf="@id/likeIcon" />
+        app:layout_constraintTop_toTopOf="@id/likeIcon"
+        app:layout_constraintBottom_toBottomOf="@id/likeIcon"/>
 
     <ImageView
         android:id="@+id/arrowImage"
@@ -131,17 +129,15 @@
         app:layout_constraintBottom_toBottomOf="@id/likeIcon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/likeIcon" />
-
+s
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/shareImage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:src="@drawable/colorcard"
         app:layout_constraintBottom_toBottomOf="@id/arrowImage"
         app:layout_constraintEnd_toStartOf="@id/arrowImage"
-        app:layout_constraintHeight_percent="0.07"
-        app:layout_constraintTop_toTopOf="@id/arrowImage"
-        app:layout_constraintWidth_percent="0.07" />
+        app:layout_constraintTop_toTopOf="@id/arrowImage" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -181,7 +177,8 @@
             android:text="@string/like"
             android:textAllCaps="false"
             android:textColor="@color/grey"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:gravity="center"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
@@ -195,7 +192,8 @@
             android:text="@string/comment"
             android:textAllCaps="false"
             android:textColor="@color/grey"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:gravity="center"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
@@ -210,7 +208,8 @@
             android:textAllCaps="false"
             android:textColor="@color/grey"
             android:textSize="16sp"
-            android:textStyle="normal"/>
+            android:textStyle="normal"
+            android:gravity="center"/>
 
 
     </LinearLayout>
