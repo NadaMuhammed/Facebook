@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Facebook</string>
-    <string name="post_text">Buckle up, because change is coming to WordPress</string>
-    <string name="post_link">http://unblast.com/color-shemes</string>
+    <string name="post_text">Buckle up, because change is coming to WordPress\nhttp://unblast.com/color-shemes</string>
     <string name="like_counts">12</string>
     <string name="username">Unblast</string>
     <string name="like">Like</string>
@@ -15,4 +14,7 @@
     <string name="help_centre">Help Centre</string>
     <string name="time_posted">2 hrs</string>
     <string name="share_counts">1 Share</string>
+    <string name="create_post_hint">What\'s on your mind?</string>
+    <string name="add_to_your_post">Add To Your Post</string>
+    <string name="post">Post</string>
 </resources>

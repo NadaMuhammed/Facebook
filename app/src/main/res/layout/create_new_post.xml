@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfileImv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/colorcard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/username"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/userProfileImv"
+        app:layout_constraintTop_toTopOf="@id/userProfileImv" />
+
+
+    <EditText
+        android:id="@+id/newPostCaptionEd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:hint="@string/create_post_hint"
+        android:padding="20dp"
+        android:textSize="23sp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userProfileImv" />
+
+    <ImageView
+        android:id="@+id/newPostImv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/newPostCaptionEd"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addPhotosBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rectangle_stroke"
+        android:drawableEnd="@drawable/smaller_photos"
+        android:padding="20dp"
+        android:text="@string/add_to_your_post"
+        android:textAlignment="viewStart"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/newPostImv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/postBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/facebook_background"
+            android:drawablePadding="5dp"
+            android:text="@string/post"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/addPhotosBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0.5"
+            android:clickable="false"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

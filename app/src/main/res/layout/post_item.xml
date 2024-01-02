@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/postItemUserProfileImv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/colorcard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/username"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/postItemUserProfileImv"
+        app:layout_constraintTop_toTopOf="@id/postItemUserProfileImv" />
+
+    <TextView
+        android:id="@+id/timePostedTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_posted"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/usernameTv"
+        app:layout_constraintTop_toBottomOf="@id/usernameTv" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_globe"
+        app:layout_constraintStart_toEndOf="@id/timePostedTv"
+        app:layout_constraintTop_toBottomOf="@id/usernameTv" />
+
+
+    <TextView
+        android:id="@+id/postCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="15dp"
+        android:textAlignment="viewStart"
+        android:text="@string/post_text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postItemUserProfileImv"
+        android:autoLink="web"
+        android:textColorLink="@color/link_color"/>
+
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        tools:src="@drawable/colorcard"
+        app:layout_constraintTop_toBottomOf="@id/postCaption" />
+
+
+    <ImageView
+        android:id="@+id/likeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/smaller_like"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postImage" />
+
+    <TextView
+        android:id="@+id/likeCounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/like_counts"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/likeIcon"
+        app:layout_constraintStart_toEndOf="@id/likeIcon"/>
+
+    <ImageView
+        android:id="@+id/arrowImv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintBottom_toBottomOf="@id/likeIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/likeIcon" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/shareImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/colorcard"
+        app:layout_constraintBottom_toBottomOf="@id/arrowImv"
+        app:layout_constraintEnd_toStartOf="@id/arrowImv"
+        app:layout_constraintTop_toTopOf="@id/arrowImv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/share_counts"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/shareImage"
+        app:layout_constraintEnd_toStartOf="@id/shareImage"
+        app:layout_constraintTop_toTopOf="@id/shareImage" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/light_grey"
+        app:layout_constraintBottom_toTopOf="@id/buttonsLayout" />
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@id/likeIcon">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_like"
+            android:drawablePadding="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="25dp"
+            android:text="@string/like"
+            android:textAllCaps="false"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_comment"
+            android:drawablePadding="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="25dp"
+            android:text="@string/comment"
+            android:textAllCaps="false"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_share"
+            android:drawablePadding="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="25dp"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/light_grey"
+        app:layout_constraintTop_toBottomOf="@id/buttonsLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
