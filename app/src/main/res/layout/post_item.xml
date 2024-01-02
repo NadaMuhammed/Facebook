@@ -5,11 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/light_grey"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/postItemUserProfileImv"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/colorcard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +28,7 @@
         android:layout_marginStart="10dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/username"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/postItemUserProfileImv"
         app:layout_constraintTop_toTopOf="@id/postItemUserProfileImv" />
@@ -40,7 +47,6 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
         android:src="@drawable/ic_globe"
         app:layout_constraintStart_toEndOf="@id/timePostedTv"
         app:layout_constraintTop_toBottomOf="@id/usernameTv" />
@@ -88,12 +94,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="2dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/like_counts"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="@id/likeIcon"
-        app:layout_constraintStart_toEndOf="@id/likeIcon"/>
+        app:layout_constraintStart_toEndOf="@id/likeIcon"
+        app:layout_constraintBottom_toBottomOf="@id/likeIcon"/>
 
     <ImageView
         android:id="@+id/arrowImv"
@@ -106,8 +112,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/shareImage"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:src="@drawable/colorcard"
         app:layout_constraintBottom_toBottomOf="@id/arrowImv"
         app:layout_constraintEnd_toStartOf="@id/arrowImv"
@@ -134,7 +140,7 @@
         android:id="@+id/buttonsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:weightSum="3"
         app:layout_constraintTop_toBottomOf="@id/likeIcon">
@@ -144,7 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:drawableStart="@drawable/ic_like"
+            android:drawableStart="@drawable/smaller_ic_like"
             android:drawablePadding="6dp"
             android:fontFamily="sans-serif-medium"
             android:padding="25dp"
@@ -156,10 +162,10 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableStart="@drawable/smaller_comment"
+            android:drawablePadding="10dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:drawableStart="@drawable/ic_comment"
-            android:drawablePadding="6dp"
             android:fontFamily="sans-serif-medium"
             android:padding="25dp"
             android:text="@string/comment"
@@ -172,7 +178,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:drawableStart="@drawable/ic_share"
+            android:drawableStart="@drawable/smaller_share"
             android:drawablePadding="6dp"
             android:fontFamily="sans-serif-medium"
             android:padding="25dp"

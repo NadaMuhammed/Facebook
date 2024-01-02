@@ -9,13 +9,19 @@
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/edit_text_background.xml" value="0.2518518518518518" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/edit_text_down.xml" value="0.262037037037037" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/ic_comment.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/ic_like.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/rectangle_stroke.xml" value="0.2518518518518518" />
+        <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/smaller_comment.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/smaller_ic_like.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/smaller_like.xml" value="0.2518518518518518" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/smaller_photos.xml" value="0.2518518518518518" />
+        <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/drawable/smaller_share.xml" value="0.26615384615384613" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/font/helvetica_neue.xml" value="0.1" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/layout/activity_login.xml" value="0.18974358974358974" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/layout/activity_post.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/layout/activity_post_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/layout/create_new_post.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/layout/post.xml" value="0.18518518518518517" />
         <entry key="..\:/Users/Nada.Mohamed/AndroidStudioProjects/Facebook/app/src/main/res/layout/post_item.xml" value="0.25416666666666665" />
