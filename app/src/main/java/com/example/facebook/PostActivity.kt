@@ -1,18 +1,13 @@
 package com.example.facebook
 
-import android.app.Activity
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.*
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.facebook.databinding.ActivityPostBinding
 
 class PostActivity : AppCompatActivity() {
     lateinit var createPostBtn: Button
@@ -21,14 +16,16 @@ class PostActivity : AppCompatActivity() {
     lateinit var postsAdapter: PostsAdapter
     lateinit var postsRecyclerView: RecyclerView
     lateinit var progressBar: ProgressBar
+    lateinit var binding: ActivityPostBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_post)
-        progressBar = findViewById(R.id.progressBar)
+        binding = ActivityPostBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        progressBar = binding.progressBar
         progressBar.visibility = View.INVISIBLE
-        createPostBtn = findViewById(R.id.createPostBtn)
+        createPostBtn = binding.createPostBtn
         postsAdapter = PostsAdapter(posts)
-        postsRecyclerView = findViewById(R.id.postsRecyclerView)
+        postsRecyclerView = binding.postsRecyclerView
         postsRecyclerView.adapter = postsAdapter
         postsAdapter.onPostClick = object : PostsAdapter.OnPostClick {
             override fun onPostClick(post: Post, position: Int) {
@@ -50,11 +47,12 @@ class PostActivity : AppCompatActivity() {
         if (post != null) {
             progressBar.visibility = View.VISIBLE
             Handler().postDelayed({
-                post = Post(post!!.caption, post!!.image)
+                post = Post(post!!.user, post!!.caption, post!!.image, post!!.timePosted)
                 posts.add(0, post!!)
                 postsAdapter.notifyDataSetChanged()
                 progressBar.visibility = View.INVISIBLE
             }, 2000)
         }
     }
+
 }

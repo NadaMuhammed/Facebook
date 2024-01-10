@@ -16,7 +16,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:src="@drawable/colorcard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +53,7 @@
 
 
     <TextView
-        android:id="@+id/postCaption"
+        android:id="@+id/postCaptionTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -70,14 +70,14 @@
 
 
     <ImageView
-        android:id="@+id/postImage"
+        android:id="@+id/postImv"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_marginTop="10dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         tools:src="@drawable/colorcard"
-        app:layout_constraintTop_toBottomOf="@id/postCaption" />
+        app:layout_constraintTop_toBottomOf="@id/postCaptionTv" />
 
 
     <ImageView
@@ -87,7 +87,7 @@
         android:layout_margin="15dp"
         android:src="@drawable/smaller_like"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/postImage" />
+        app:layout_constraintTop_toBottomOf="@id/postImv" />
 
     <TextView
         android:id="@+id/likeCounts"

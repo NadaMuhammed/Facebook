@@ -8,12 +8,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class PostsAdapter(var posts: ArrayList<Post>) :
+class PostsAdapter(var postsList: ArrayList<Post>) :
     RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
     lateinit var onPostClick: OnPostClick
     class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var postCaption = itemView.findViewById<TextView>(R.id.postCaption)
-        var postImv = itemView.findViewById<ImageView>(R.id.postImage)
+        var postCaption = itemView.findViewById<TextView>(R.id.postCaptionTv)
+        var postImv = itemView.findViewById<ImageView>(R.id.postImv)
+        var userName = itemView.findViewById<TextView>(R.id.usernameTv)
+        var userProfilePicture = itemView.findViewById<ImageView>(R.id.postItemUserProfileImv)
+        var timePosted = itemView.findViewById<TextView>(R.id.timePostedTv)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
@@ -23,25 +26,28 @@ class PostsAdapter(var posts: ArrayList<Post>) :
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        if (posts[position].caption.isEmpty()) {
+        if (postsList[position].caption.isEmpty()) {
             holder.postCaption.visibility = View.GONE
         } else {
-            holder.postCaption.text = posts[position].caption
+            holder.postCaption.text = postsList[position].caption
         }
-        if (posts[position].image.equals(Uri.EMPTY)) {
+        if (postsList[position].image.equals(Uri.EMPTY)) {
             holder.postImv.visibility = View.GONE
         } else {
             holder.postImv.visibility = View.VISIBLE
-            holder.postImv.setImageURI(posts[position].image)
+            holder.postImv.setImageURI(postsList[position].image)
         }
+
+        holder.userName.text = postsList[position].user.username
+        holder.userProfilePicture.setImageResource(postsList[position].user.profilePicture)
+        holder.timePosted.text = postsList[position].timePosted
+
         holder.itemView.setOnClickListener {
-            onPostClick.onPostClick(posts[position],position)
+            onPostClick.onPostClick(postsList[position],position)
         }
     }
 
-    override fun getItemCount(): Int {
-        return posts.size
-    }
+    override fun getItemCount(): Int = postsList.size
 
     interface OnPostClick{
         fun onPostClick(post: Post, position: Int)

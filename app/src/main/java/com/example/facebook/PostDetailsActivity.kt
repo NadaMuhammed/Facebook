@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.facebook.databinding.ActivityPostDetailsBinding
 
 class PostDetailsActivity : AppCompatActivity() {
     lateinit var postCaption: TextView
@@ -13,8 +14,8 @@ class PostDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.post_item)
-        postCaption = findViewById(R.id.postCaption)
-        postImageView = findViewById(R.id.postImage)
+        postCaption = findViewById(R.id.postCaptionTv)
+        postImageView = findViewById(R.id.postImv)
         val post = intent.getParcelableExtra<Post>("post")
         if (post?.image?.equals(Uri.EMPTY) == true) {
             postImageView.visibility = View.GONE

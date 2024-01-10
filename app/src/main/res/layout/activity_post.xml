@@ -22,31 +22,31 @@
         android:layout_marginHorizontal="5dp"
         android:background="@android:color/transparent"
         android:hint="@string/create_post_hint"
-        android:textAlignment="viewStart"
         android:paddingStart="20dp"
-        app:layout_constraintTop_toTopOf="@id/userProfile"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/userProfile"
-        app:layout_constraintStart_toEndOf="@id/userProfile"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="16sp"/>
-
+        app:layout_constraintStart_toEndOf="@id/userProfile"
+        app:layout_constraintTop_toTopOf="@id/userProfile" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:indeterminateTint="@color/grey"
-        app:layout_constraintTop_toBottomOf="@id/createPostBtn"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createPostBtn" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/postsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/createPostBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/post_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>
